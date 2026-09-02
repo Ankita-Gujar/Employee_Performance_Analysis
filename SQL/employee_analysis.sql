@@ -1,0 +1,13 @@
+create database employee_analysis;
+use employee_analysis;
+select * from employees;
+select count(*) as Total_Employees from employees;
+select * from employees limit 10;
+select department, count(*) as employee_count from employees group by department;
+select gender, count(*) as employee_count from employees group by gender;
+select status, count(*) as employee_count from employees group by status;
+select location, count(*) as employee_count from employees group by location;
+select avg(salary) as Average_Salary from employees;
+select MAX(salary) as Maximum_Salary from employees;
+select min(salary) as Minimum_Salary from employees;
+select department, round(avg(Salary), 2) as Average_salary from employees group by department order by Average_Salary DESC;
